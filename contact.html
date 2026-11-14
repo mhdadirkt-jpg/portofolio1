@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Adil</title>
+<meta name="description" content="Brand identity, logo, poster and AI-integrated web design.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main>
+  <section class="section" data-liquid>
+    <div class="narrow">
+      <h1 class="big chrome-text">Tell us what you’re ready to make unforgettable.</h1>
+      <p class="muted" style="margin-top:24px;max-width:560px;font-size:1.1rem">Share the essentials below. The form is intentionally focused so the first reply can be useful, fast, and personal.</p>
+
+      <form id="contact-form" class="form-card glass" novalidate>
+        <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-grid">
+          <div>
+            <label for="name">Full Name <span>· Required</span></label>
+            <div class="field"><input id="name" name="name" required placeholder="Your full name" autocomplete="name" aria-describedby="err-name"></div>
+            <p class="err" id="err-name" role="alert"></p>
+          </div>
+          <div>
+            <label for="email">Email Address <span>· Required</span></label>
+            <div class="field"><input id="email" name="email" type="email" required placeholder="you@example.com" autocomplete="email" aria-describedby="err-email"></div>
+            <p class="err" id="err-email" role="alert"></p>
+          </div>
+          <div>
+            <label for="whatsapp">WhatsApp Number <span>· Optional</span></label>
+            <div class="field"><input id="whatsapp" name="whatsapp" type="tel" placeholder="+44 0000 000000" autocomplete="tel" aria-describedby="err-whatsapp"></div>
+            <p class="err" id="err-whatsapp" role="alert"></p>
+          </div>
+          <div>
+            <label id="type-lbl" for="type-btn">Project Type <span>· Required</span></label>
+            <div class="dropdown" id="type-dropdown">
+              <div class="field">
+                <button type="button" class="select-btn" id="type-btn" aria-haspopup="listbox" aria-expanded="false" aria-controls="type-list" aria-labelledby="type-lbl type-btn" aria-describedby="err-projectType">
+                  <span id="type-label" class="ph">Select a project type</span>
+                  <svg width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </button>
+              </div>
+              <ul class="options" id="type-list" role="listbox" aria-labelledby="type-lbl" hidden></ul>
+            </div>
+            <p class="err" id="err-projectType" role="alert"></p>
+          </div>
+          <div class="full">
+            <label for="budget">Budget <span>· Optional</span></label>
+            <div class="field"><input id="budget" name="budget" placeholder="Your estimated budget"></div>
+          </div>
+          <div class="full">
+            <label for="details">Project Details <span>· Required</span></label>
+            <div class="field"><textarea id="details" name="details" required rows="6" placeholder="Tell me what you’re building, the style you like, deliverables, and any references." aria-describedby="err-details"></textarea></div>
+            <p class="err" id="err-details" role="alert"></p>
+          </div>
+        </div>
+        <p class="form-error" id="form-error" role="alert" hidden></p>
+        <div class="form-bar">
+          <p class="small">Usually replies within 24 hours · sent to mhdadirkt@gmail.com</p>
+          <button type="submit" id="send" class="liquid-btn">Send Message →</button>
+        </div>
+      </form>
+
+      <div id="success" class="success glass" role="status" tabindex="-1">
+        <div class="drop"><i></i><i></i><i></i><b><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#08080a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></b></div>
+        <h2 class="display chrome-text" style="font-size:2rem">Message received.</h2>
+        <p class="muted" style="margin-top:12px;max-width:440px">Thanks, <span id="success-name"></span>. Your brief is in. Expect a personal reply at <span id="success-email"></span> within 24 hours.</p>
+        <button class="link-btn" id="again" type="button">Send another message</button>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="js/main.js"></script>
+<script src="js/contact.js"></script>
+</body></html>
